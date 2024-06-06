@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Seguridad_Controlador;
 
 namespace CapaVistaPrototipo
 {
     public partial class MDI : Form
     {
+        Controlador cn = new Controlador();
         public MDI()
         {
             InitializeComponent();
@@ -101,19 +102,28 @@ namespace CapaVistaPrototipo
 
         private void btn_Mantemiento1_Click(object sender, EventArgs e)
         {
-            Abrir(new Mantenimientos.frmMantenimientoAlumnos());
+            Abrir(new Mantenimientos.DavidCarrillo_MantenimientoAlumnos());
             hideSubMenu();
+            cn.setBtitacora("9001", "Mant. Alumnos");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Abrir(new Mantenimientos.frmMantenimientoCursos());
+            Abrir(new Mantenimientos.DavidCarrillo_MantenimientoCarreras());
             hideSubMenu();
+            cn.setBtitacora("9002", "Mant. Cursos");
         }
 
         private void btn_Proceso1_Click(object sender, EventArgs e)
         {
             Abrir(new Procesos.frmAsignacionCursos_y_Alumnos());
+            hideSubMenu();
+            cn.setBtitacora("9003", "Pro. Asignacion de cursos y alumnos");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Abrir(new Mantenimientos.DavidCarrillo_MantenimientoCursos());
             hideSubMenu();
         }
 

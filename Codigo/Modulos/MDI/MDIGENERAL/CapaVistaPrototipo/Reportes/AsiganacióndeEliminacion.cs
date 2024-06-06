@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaVistaPrototipo.Mantenimientos
+namespace CapaVistaPrototipo.Reportes
 {
-    public partial class frmMantenimientoAlumnos : Form
+    public partial class AsiganacióndeEliminacion : Form
     {
-        public frmMantenimientoAlumnos()
+        public AsiganacióndeEliminacion()
         {
             InitializeComponent();
-            this.navegador1.config("alumnos", this, "9001");
         }
     }
 }

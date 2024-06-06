@@ -55,6 +55,10 @@ namespace CapaVistaPrototipo
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+<<<<<<< HEAD
+=======
+            this.button7 = new System.Windows.Forms.Button();
+>>>>>>> 19d9b50933a898b2079be65e3c8e5eb16f32f681
             this.panelMDI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelSideMenu.SuspendLayout();
@@ -121,7 +125,7 @@ namespace CapaVistaPrototipo
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsalir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsalir.ForeColor = System.Drawing.Color.Black;
-            this.btnsalir.Location = new System.Drawing.Point(0, 777);
+            this.btnsalir.Location = new System.Drawing.Point(0, 797);
             this.btnsalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Padding = new System.Windows.Forms.Padding(68, 0, 0, 0);
@@ -141,7 +145,7 @@ namespace CapaVistaPrototipo
             this.btnayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnayuda.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnayuda.ForeColor = System.Drawing.Color.Black;
-            this.btnayuda.Location = new System.Drawing.Point(0, 729);
+            this.btnayuda.Location = new System.Drawing.Point(0, 749);
             this.btnayuda.Margin = new System.Windows.Forms.Padding(4);
             this.btnayuda.Name = "btnayuda";
             this.btnayuda.Padding = new System.Windows.Forms.Padding(68, 0, 0, 0);
@@ -156,7 +160,7 @@ namespace CapaVistaPrototipo
             // 
             this.panelSeguridad.BackColor = System.Drawing.Color.LightGray;
             this.panelSeguridad.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSeguridad.Location = new System.Drawing.Point(0, 683);
+            this.panelSeguridad.Location = new System.Drawing.Point(0, 703);
             this.panelSeguridad.Margin = new System.Windows.Forms.Padding(4);
             this.panelSeguridad.Name = "panelSeguridad";
             this.panelSeguridad.Size = new System.Drawing.Size(348, 46);
@@ -172,7 +176,7 @@ namespace CapaVistaPrototipo
             this.btnSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeguridad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeguridad.ForeColor = System.Drawing.Color.Black;
-            this.btnSeguridad.Location = new System.Drawing.Point(0, 635);
+            this.btnSeguridad.Location = new System.Drawing.Point(0, 655);
             this.btnSeguridad.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeguridad.Name = "btnSeguridad";
             this.btnSeguridad.Padding = new System.Windows.Forms.Padding(68, 0, 0, 0);
@@ -188,7 +192,7 @@ namespace CapaVistaPrototipo
             this.panelReporte.BackColor = System.Drawing.Color.LightGray;
             this.panelReporte.Controls.Add(this.button2);
             this.panelReporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReporte.Location = new System.Drawing.Point(0, 552);
+            this.panelReporte.Location = new System.Drawing.Point(0, 572);
             this.panelReporte.Margin = new System.Windows.Forms.Padding(4);
             this.panelReporte.Name = "panelReporte";
             this.panelReporte.Size = new System.Drawing.Size(348, 83);
@@ -221,7 +225,7 @@ namespace CapaVistaPrototipo
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportes.ForeColor = System.Drawing.Color.Black;
-            this.btnReportes.Location = new System.Drawing.Point(0, 495);
+            this.btnReportes.Location = new System.Drawing.Point(0, 515);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(4);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(68, 0, 0, 0);
@@ -238,7 +242,7 @@ namespace CapaVistaPrototipo
             this.PanelProcesos.Controls.Add(this.button4);
             this.PanelProcesos.Controls.Add(this.btn_Proceso1);
             this.PanelProcesos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelProcesos.Location = new System.Drawing.Point(0, 398);
+            this.PanelProcesos.Location = new System.Drawing.Point(0, 418);
             this.PanelProcesos.Margin = new System.Windows.Forms.Padding(4);
             this.PanelProcesos.Name = "PanelProcesos";
             this.PanelProcesos.Size = new System.Drawing.Size(348, 97);
@@ -289,7 +293,7 @@ namespace CapaVistaPrototipo
             this.btnProcesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcesos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProcesos.ForeColor = System.Drawing.Color.Black;
-            this.btnProcesos.Location = new System.Drawing.Point(0, 339);
+            this.btnProcesos.Location = new System.Drawing.Point(0, 359);
             this.btnProcesos.Margin = new System.Windows.Forms.Padding(4);
             this.btnProcesos.Name = "btnProcesos";
             this.btnProcesos.Padding = new System.Windows.Forms.Padding(68, 0, 0, 0);
@@ -303,6 +307,7 @@ namespace CapaVistaPrototipo
             // panelMantenimientos
             // 
             this.panelMantenimientos.BackColor = System.Drawing.Color.LightGray;
+            this.panelMantenimientos.Controls.Add(this.button7);
             this.panelMantenimientos.Controls.Add(this.button6);
             this.panelMantenimientos.Controls.Add(this.button5);
             this.panelMantenimientos.Controls.Add(this.button3);
@@ -312,7 +317,7 @@ namespace CapaVistaPrototipo
             this.panelMantenimientos.Location = new System.Drawing.Point(0, 203);
             this.panelMantenimientos.Margin = new System.Windows.Forms.Padding(4);
             this.panelMantenimientos.Name = "panelMantenimientos";
-            this.panelMantenimientos.Size = new System.Drawing.Size(348, 136);
+            this.panelMantenimientos.Size = new System.Drawing.Size(348, 156);
             this.panelMantenimientos.TabIndex = 3;
             this.panelMantenimientos.Visible = false;
             // 
@@ -332,7 +337,10 @@ namespace CapaVistaPrototipo
             this.button6.Text = "SECCIONES";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.button6.Click += new System.EventHandler(this.button6_Click);
+=======
+>>>>>>> 19d9b50933a898b2079be65e3c8e5eb16f32f681
             // 
             // button5
             // 
@@ -350,7 +358,10 @@ namespace CapaVistaPrototipo
             this.button5.Text = "JORNADAS";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.button5.Click += new System.EventHandler(this.button5_Click);
+=======
+>>>>>>> 19d9b50933a898b2079be65e3c8e5eb16f32f681
             // 
             // button3
             // 
@@ -479,6 +490,27 @@ namespace CapaVistaPrototipo
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
+<<<<<<< HEAD
+=======
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button7.Location = new System.Drawing.Point(0, 129);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
+            this.button7.Size = new System.Drawing.Size(348, 26);
+            this.button7.TabIndex = 9;
+            this.button7.Text = "CURSOS";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+>>>>>>> 19d9b50933a898b2079be65e3c8e5eb16f32f681
             // MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -528,5 +560,6 @@ namespace CapaVistaPrototipo
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }

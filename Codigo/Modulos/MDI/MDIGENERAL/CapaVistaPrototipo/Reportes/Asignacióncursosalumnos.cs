@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaVistaPrototipo.Mantenimientos
+namespace CapaVistaPrototipo.Reportes
 {
-    public partial class frmMantenimientoCursos : Form
+    public partial class Asignacióncursosalumnos : Form
     {
-        public frmMantenimientoCursos()
+        public Asignacióncursosalumnos()
         {
             InitializeComponent();
-            this.navegador1.config("cursos", this, "9002");
         }
     }
 }
