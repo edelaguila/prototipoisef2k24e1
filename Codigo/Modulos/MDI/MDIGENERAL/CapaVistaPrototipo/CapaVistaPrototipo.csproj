@@ -53,17 +53,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mantenimientos\frmMantenimientoAlumnos.cs">
+    <Compile Include="Mantenimientos\DavidCarrillo_MantenimientoCarreras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimientos\frmMantenimientoAlumnos.Designer.cs">
-      <DependentUpon>frmMantenimientoAlumnos.cs</DependentUpon>
+    <Compile Include="Mantenimientos\DavidCarrillo_MantenimientoCarreras.Designer.cs">
+      <DependentUpon>DavidCarrillo_MantenimientoCarreras.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimientos\frmMantenimientoCursos.cs">
+    <Compile Include="Mantenimientos\DavidCarrillo_MantenimientoAlumnos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimientos\frmMantenimientoCursos.Designer.cs">
-      <DependentUpon>frmMantenimientoCursos.cs</DependentUpon>
+    <Compile Include="Mantenimientos\DavidCarrillo_MantenimientoAlumnos.Designer.cs">
+      <DependentUpon>DavidCarrillo_MantenimientoAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\DavidCarrillo_MantenimientoCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\DavidCarrillo_MantenimientoCursos.Designer.cs">
+      <DependentUpon>DavidCarrillo_MantenimientoCursos.cs</DependentUpon>
     </Compile>
     <Compile Include="MDI.cs">
       <SubType>Form</SubType>
@@ -80,11 +86,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Mantenimientos\frmMantenimientoAlumnos.resx">
-      <DependentUpon>frmMantenimientoAlumnos.cs</DependentUpon>
+    <EmbeddedResource Include="Mantenimientos\DavidCarrillo_MantenimientoAlumnos.resx">
+      <DependentUpon>DavidCarrillo_MantenimientoAlumnos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\frmMantenimientoCursos.resx">
-      <DependentUpon>frmMantenimientoCursos.cs</DependentUpon>
+    <EmbeddedResource Include="Mantenimientos\DavidCarrillo_MantenimientoCarreras.resx">
+      <DependentUpon>DavidCarrillo_MantenimientoCarreras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\DavidCarrillo_MantenimientoCursos.resx">
+      <DependentUpon>DavidCarrillo_MantenimientoCursos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDI.resx">
       <DependentUpon>MDI.cs</DependentUpon>

@@ -101,19 +101,25 @@ namespace CapaVistaPrototipo
 
         private void btn_Mantemiento1_Click(object sender, EventArgs e)
         {
-            Abrir(new Mantenimientos.frmMantenimientoAlumnos());
+            Abrir(new Mantenimientos.DavidCarrillo_MantenimientoAlumnos());
             hideSubMenu();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Abrir(new Mantenimientos.frmMantenimientoCursos());
+            Abrir(new Mantenimientos.DavidCarrillo_MantenimientoCarreras());
             hideSubMenu();
         }
 
         private void btn_Proceso1_Click(object sender, EventArgs e)
         {
             Abrir(new Procesos.frmAsignacionCursos_y_Alumnos());
+            hideSubMenu();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Abrir(new Mantenimientos.DavidCarrillo_MantenimientoCursos());
             hideSubMenu();
         }
     }

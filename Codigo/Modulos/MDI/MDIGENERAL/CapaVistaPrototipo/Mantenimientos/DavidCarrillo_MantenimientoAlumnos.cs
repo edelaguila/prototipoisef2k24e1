@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace CapaVistaPrototipo.Mantenimientos
 {
-    public partial class frmMantenimientoCursos : Form
+    public partial class DavidCarrillo_MantenimientoAlumnos : Form
     {
-        public frmMantenimientoCursos()
+        public DavidCarrillo_MantenimientoAlumnos()
         {
             InitializeComponent();
-            this.navegador1.config("cursos", this, "9002");
+            this.navegador1.config("alumnos", this, "9001");
         }
     }
 }
