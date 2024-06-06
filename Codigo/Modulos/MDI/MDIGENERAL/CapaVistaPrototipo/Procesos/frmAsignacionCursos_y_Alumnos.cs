@@ -354,5 +354,11 @@ namespace CapaVistaPrototipo.Procesos
             string rutaAyuda = @"..\..\..\..\..\..\..\Ayuda\Modulos\Ayudas\AyudasByTech.chm";
             Help.ShowHelp(this, rutaAyuda, "Bancos.html");
         }
+
+        private void btn_reporte_Click(object sender, EventArgs e)
+        {
+            Reportes.Asignacióncursosalumnos alumnos = new Reportes.Asignacióncursosalumnos();
+            alumnos.Show();
+        }
     }
 }
