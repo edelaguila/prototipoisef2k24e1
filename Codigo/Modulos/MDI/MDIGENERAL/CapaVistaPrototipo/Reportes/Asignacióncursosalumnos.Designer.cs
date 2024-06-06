@@ -30,6 +30,7 @@ namespace CapaVistaPrototipo.Reportes
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.ReporteACA1 = new CapaVistaPrototipo.ReporteACA();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -40,6 +41,7 @@ namespace CapaVistaPrototipo.Reportes
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.ReporteACA1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(912, 530);
             this.crystalReportViewer1.TabIndex = 0;
             // 
@@ -58,5 +60,6 @@ namespace CapaVistaPrototipo.Reportes
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private ReporteACA ReporteACA1;
     }
 }
