@@ -31,18 +31,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaControladorPrototipo">
-      <HintPath>..\CapaControladorPrototipo\bin\Debug\CapaControladorPrototipo.dll</HintPath>
-    </Reference>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CapaVistaNav">
       <HintPath>..\..\..\..\Componentes\Navegador\CapaVista\bin\Debug\CapaVistaNav.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Seguridad_Controlador">
-      <HintPath>..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files\UMG\Instalador General HSC\Seguridad_Controlador.dll</HintPath>
+      <HintPath>..\..\..\..\En caso de dll faltantes\Seguridad_Controlador.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,25 +56,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mantenimientos\frmMantenimientoAlumnos.cs" />
-    <Compile Include="Mantenimientos\frmMantenimientoAlumnos.Designer.cs">
-      <DependentUpon>frmMantenimientoAlumnos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimientos\frmMantenimientoCursos.cs" />
-    <Compile Include="Mantenimientos\frmMantenimientoCursos.Designer.cs">
-      <DependentUpon>frmMantenimientoCursos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimientos\frmMantenimientoSecciones.cs">
+    <Compile Include="Mantenimientos\DavidCarrillo_MantenimientoCarreras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimientos\frmMantenimientoSecciones.Designer.cs">
-      <DependentUpon>frmMantenimientoSecciones.cs</DependentUpon>
+    <Compile Include="Mantenimientos\DavidCarrillo_MantenimientoCarreras.Designer.cs">
+      <DependentUpon>DavidCarrillo_MantenimientoCarreras.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimientos\frmMatenimientoJornadas.cs">
+    <Compile Include="Mantenimientos\DavidCarrillo_MantenimientoAlumnos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimientos\frmMatenimientoJornadas.Designer.cs">
-      <DependentUpon>frmMatenimientoJornadas.cs</DependentUpon>
+    <Compile Include="Mantenimientos\DavidCarrillo_MantenimientoAlumnos.Designer.cs">
+      <DependentUpon>DavidCarrillo_MantenimientoAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\DavidCarrillo_MantenimientoCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\DavidCarrillo_MantenimientoCursos.Designer.cs">
+      <DependentUpon>DavidCarrillo_MantenimientoCursos.cs</DependentUpon>
     </Compile>
     <Compile Include="MDI.cs">
       <SubType>Form</SubType>
@@ -85,19 +87,34 @@
       <DependentUpon>frmAsignacionCursos_y_Alumnos.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\AsiganacióndeEliminacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\AsiganacióndeEliminacion.Designer.cs">
+      <DependentUpon>AsiganacióndeEliminacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteACA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteACA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Asignacióncursosalumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Asignacióncursosalumnos.Designer.cs">
+      <DependentUpon>Asignacióncursosalumnos.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Mantenimientos\frmMantenimientoAlumnos.resx">
-      <DependentUpon>frmMantenimientoAlumnos.cs</DependentUpon>
+    <EmbeddedResource Include="Mantenimientos\DavidCarrillo_MantenimientoAlumnos.resx">
+      <DependentUpon>DavidCarrillo_MantenimientoAlumnos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\frmMantenimientoCursos.resx">
-      <DependentUpon>frmMantenimientoCursos.cs</DependentUpon>
+    <EmbeddedResource Include="Mantenimientos\DavidCarrillo_MantenimientoCarreras.resx">
+      <DependentUpon>DavidCarrillo_MantenimientoCarreras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\frmMantenimientoSecciones.resx">
-      <DependentUpon>frmMantenimientoSecciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\frmMatenimientoJornadas.resx">
-      <DependentUpon>frmMatenimientoJornadas.cs</DependentUpon>
+    <EmbeddedResource Include="Mantenimientos\DavidCarrillo_MantenimientoCursos.resx">
+      <DependentUpon>DavidCarrillo_MantenimientoCursos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDI.resx">
       <DependentUpon>MDI.cs</DependentUpon>
@@ -105,9 +122,16 @@
     <EmbeddedResource Include="Procesos\frmAsignacionCursos_y_Alumnos.resx">
       <DependentUpon>frmAsignacionCursos_y_Alumnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteACA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteACA.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Asignacióncursosalumnos.resx">
+      <DependentUpon>Asignacióncursosalumnos.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Reportes\" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
