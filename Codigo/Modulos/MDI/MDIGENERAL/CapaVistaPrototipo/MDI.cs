@@ -116,5 +116,17 @@ namespace CapaVistaPrototipo
             Abrir(new Procesos.frmAsignacionCursos_y_Alumnos());
             hideSubMenu();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Abrir(new Mantenimientos.frmMatenimientoJornadas());
+            hideSubMenu();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Abrir(new Mantenimientos.frmMantenimientoSecciones());
+            hideSubMenu();
+        }
     }
 }

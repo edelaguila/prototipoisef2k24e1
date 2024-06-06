@@ -37,9 +37,8 @@
     <Reference Include="CapaVistaNav">
       <HintPath>..\..\..\..\Componentes\Navegador\CapaVista\bin\Debug\CapaVistaNav.dll</HintPath>
     </Reference>
-    <Reference Include="Seguridad_Controlador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files\UMG\Instalador General HSC\Seguridad_Controlador.dll</HintPath>
+    <Reference Include="Seguridad_Controlador">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files\UMG\Instalador General HSC\Seguridad_Controlador.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -65,6 +64,18 @@
     <Compile Include="Mantenimientos\frmMantenimientoCursos.Designer.cs">
       <DependentUpon>frmMantenimientoCursos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\frmMantenimientoSecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMantenimientoSecciones.Designer.cs">
+      <DependentUpon>frmMantenimientoSecciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMatenimientoJornadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMatenimientoJornadas.Designer.cs">
+      <DependentUpon>frmMatenimientoJornadas.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +96,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\frmMantenimientoCursos.resx">
       <DependentUpon>frmMantenimientoCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmMantenimientoSecciones.resx">
+      <DependentUpon>frmMantenimientoSecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmMatenimientoJornadas.resx">
+      <DependentUpon>frmMatenimientoJornadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDI.resx">
       <DependentUpon>MDI.cs</DependentUpon>
