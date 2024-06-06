@@ -79,5 +79,45 @@ namespace CapaModeloPrototipo
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, con.conexion());
             return dataTable;
         }
+
+        public void Insertarasignacionalumno(string codigo_carrera, string codigo_sed, string codigo_jornada, string codigo_seccion, string codigo_aula, string codigo_curso, string carnet_alumno, double nota_asignacioncursoalumnos)
+        {
+            using (OdbcConnection connection = con.conexion())
+            {
+                if (connection != null)
+                {
+                    using (OdbcTransaction transaction = connection.BeginTransaction())
+                    {
+                        try
+                        {
+                            // Insertar en la tabla tbl_asignacioncursosalumnos
+                            string insertQuery = "INSERT INTO asignacioncursosalumnos (codigo_carrera,codigo_sed,codigo_jornada,codigo_seccion,codigo_aula,codigo_curso,carnet_alumno,nota_asignacioncursoalumnos) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                            using (OdbcCommand cmd = new OdbcCommand(insertQuery, connection, transaction))
+                            {
+                                cmd.Parameters.AddWithValue("@codigo_carrera", codigo_carrera);
+                                cmd.Parameters.AddWithValue("@codigo_sed", codigo_sed);
+                                cmd.Parameters.AddWithValue("@codigo_jornada", codigo_jornada);
+                                cmd.Parameters.AddWithValue("@codigo_seccion", codigo_seccion);
+                                cmd.Parameters.AddWithValue("@codigo_aula", codigo_aula);
+                                cmd.Parameters.AddWithValue("@codigo_curso", codigo_curso);
+                                cmd.Parameters.AddWithValue("@carnet_alumno", carnet_alumno);
+                                cmd.Parameters.AddWithValue("@nota_asignacioncursoalumnos", nota_asignacioncursoalumnos);
+
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            // Confirmar la transacción si la inserción fue exitosa
+                            transaction.Commit();
+                        }
+                        catch (Exception ex)
+                        {
+                            // Revertir la transacción si ocurre algún error
+                            transaction.Rollback();
+                            Console.WriteLine($"Error al insertar asignacioncursosalumnos : {ex.Message}");
+                        }
+                    }
+                }
+            }
+        }
     }
 }

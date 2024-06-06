@@ -32,6 +32,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CapaControladorPrototipo">
+      <HintPath>..\CapaControladorPrototipo\bin\Debug\CapaControladorPrototipo.dll</HintPath>
+    </Reference>
     <Reference Include="CapaVistaNav">
       <HintPath>..\..\..\..\Componentes\Navegador\CapaVista\bin\Debug\CapaVistaNav.dll</HintPath>
     </Reference>

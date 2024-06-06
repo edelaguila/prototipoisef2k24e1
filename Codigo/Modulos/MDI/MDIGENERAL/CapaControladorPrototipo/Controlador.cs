@@ -35,5 +35,12 @@ namespace CapaControladorPrototipo
             dt.Fill(table);
             return table;
         }
+
+        //diego
+        public void Insertarasignacionalumno(string codigo_carrera, string codigo_sed, string codigo_jornada, string codigo_seccion, string codigo_aula, string codigo_curso, string carnet_alumno, double nota_asignacioncursoalumnos)
+        {
+            sn.Insertarasignacionalumno(codigo_carrera, codigo_sed, codigo_jornada, codigo_seccion, codigo_aula, codigo_curso, carnet_alumno, nota_asignacioncursoalumnos);
+
+        }
     }
 }

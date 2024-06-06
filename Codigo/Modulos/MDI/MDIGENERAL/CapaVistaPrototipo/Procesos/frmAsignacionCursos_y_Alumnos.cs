@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using CapaControladorPrototipo;
 
 namespace CapaVistaPrototipo.Procesos
@@ -266,22 +267,44 @@ namespace CapaVistaPrototipo.Procesos
 
         public void GuardarDatos()
         {
+          
+
             string tabla = "asignacioncursosalumnos";
             Dictionary<string, object> valores = new Dictionary<string, object>();
 
+            string codigo_carrera = txt_nombreCarrera.Text;
             valores.Add("codigo_carrera", cb_carrera.SelectedItem);
-            valores.Add("codigo_sede", cb_sede.SelectedItem);
-            valores.Add("codigo_jornada", cb_jornada.SelectedItem);
-            valores.Add("codigo_seccion", cb_seccion.SelectedItem);
-            valores.Add("codigo_aula", cb_Aula.SelectedItem);
-            valores.Add("codigo_curso", cb_curso.SelectedItem);
-            valores.Add("carnet_alumno", cb_alumno.SelectedItem);
-            valores.Add("nota_asignacioncursoalumnos", txt_nota.Text);
+
+            string codigo_sede = txt_nombreSede.Text;
+            valores.Add("codigo_sede", cb_carrera.SelectedItem);
 
 
-            cn.GuardarDatos(tabla, valores);
 
-            //MessageBox.Show("Datos guardados");
+
+            string codigo_jornada = txt_nombreJornada.Text;
+            valores.Add("codigo_jornada", cb_carrera.SelectedItem);
+
+            string codigo_seccion = txt_nombreJornada.Text;
+            valores.Add("codigo_seccion", cb_carrera.SelectedItem);
+
+
+            string codigo_aula = txt_nombreSeccion.Text;
+            valores.Add("codigo_aula", cb_carrera.SelectedItem);
+
+            string codigo_curso = txt_nombreCurso.Text;
+            valores.Add("codigo_curso", cb_carrera.SelectedItem);
+
+            string carnet_alumno = txt_nombreCurso.Text;
+            valores.Add("carnet_alumno", cb_carrera.SelectedItem);
+
+
+            double nota_asignacioncursoalumnos = double.Parse(txt_nombreAlumno.Text);
+            valores.Add("nota_asignacioncursoalumnos", cb_carrera.SelectedItem);
+
+
+
+
+            cn.Insertarasignacionalumno(codigo_carrera, codigo_sede, codigo_jornada, codigo_seccion, codigo_aula, codigo_curso, carnet_alumno, nota_asignacioncursoalumnos);
         }
 
 
