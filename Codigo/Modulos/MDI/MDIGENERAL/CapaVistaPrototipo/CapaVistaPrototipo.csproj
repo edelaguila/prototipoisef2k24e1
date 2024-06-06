@@ -39,13 +39,22 @@
     <Reference Include="CapaVistaNav">
       <HintPath>..\..\..\..\Componentes\Navegador\CapaVista\bin\Debug\CapaVistaNav.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
+    <Reference Include="Seguridad_Controlador">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files\UMG\Instalador General HSC\Seguridad_Controlador.dll</HintPath>
+=======
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Seguridad_Controlador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+<<<<<<< HEAD
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files\UMG\Instalador General HSC\Seguridad_Controlador.dll</HintPath>
+>>>>>>> 19d9b50933a898b2079be65e3c8e5eb16f32f681
+=======
       <HintPath>..\..\..\..\En caso de dll faltantes\Seguridad_Controlador.dll</HintPath>
+>>>>>>> c2b5eb047f22a8c52a9a09639142c5aaffa2d033
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -78,6 +87,18 @@
     </Compile>
     <Compile Include="Mantenimientos\DavidCarrillo_MantenimientoCursos.Designer.cs">
       <DependentUpon>DavidCarrillo_MantenimientoCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMantenimientoSecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMantenimientoSecciones.Designer.cs">
+      <DependentUpon>frmMantenimientoSecciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMatenimientoJornadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMatenimientoJornadas.Designer.cs">
+      <DependentUpon>frmMatenimientoJornadas.cs</DependentUpon>
     </Compile>
     <Compile Include="MDI.cs">
       <SubType>Form</SubType>
@@ -114,6 +135,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\DavidCarrillo_MantenimientoCursos.resx">
       <DependentUpon>DavidCarrillo_MantenimientoCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmMantenimientoSecciones.resx">
+      <DependentUpon>frmMantenimientoSecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmMatenimientoJornadas.resx">
+      <DependentUpon>frmMatenimientoJornadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDI.resx">
       <DependentUpon>MDI.cs</DependentUpon>

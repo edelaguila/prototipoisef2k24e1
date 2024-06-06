@@ -56,6 +56,13 @@ namespace CapaVistaPrototipo
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            this.button7 = new System.Windows.Forms.Button();
+>>>>>>> 19d9b50933a898b2079be65e3c8e5eb16f32f681
+=======
+>>>>>>> c2b5eb047f22a8c52a9a09639142c5aaffa2d033
             this.panelMDI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelSideMenu.SuspendLayout();
@@ -351,6 +358,10 @@ namespace CapaVistaPrototipo
             this.button6.Text = "SECCIONES";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+=======
+>>>>>>> 19d9b50933a898b2079be65e3c8e5eb16f32f681
             // 
             // button5
             // 
@@ -368,6 +379,10 @@ namespace CapaVistaPrototipo
             this.button5.Text = "JORNADAS";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+=======
+>>>>>>> 19d9b50933a898b2079be65e3c8e5eb16f32f681
             // 
             // button3
             // 
@@ -496,6 +511,30 @@ namespace CapaVistaPrototipo
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button7.Location = new System.Drawing.Point(0, 129);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
+            this.button7.Size = new System.Drawing.Size(348, 26);
+            this.button7.TabIndex = 9;
+            this.button7.Text = "CURSOS";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+>>>>>>> 19d9b50933a898b2079be65e3c8e5eb16f32f681
+=======
+>>>>>>> c2b5eb047f22a8c52a9a09639142c5aaffa2d033
             // MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
