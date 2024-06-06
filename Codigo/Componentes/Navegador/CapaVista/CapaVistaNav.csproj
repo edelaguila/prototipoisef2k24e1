@@ -39,7 +39,7 @@
       <HintPath>..\..\Consultas\Capa_Vista\bin\Debug\Capa_VistaConsultas.dll</HintPath>
     </Reference>
     <Reference Include="Seguridad_Controlador">
-      <HintPath>..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files\UMG\Instalador General HSC\Seguridad_Controlador.dll</HintPath>
+      <HintPath>..\..\..\En caso de dll faltantes\Seguridad_Controlador.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
