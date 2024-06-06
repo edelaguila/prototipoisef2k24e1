@@ -32,6 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CapaControladorPrototipo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CapaControladorPrototipo\bin\Debug\CapaControladorPrototipo.dll</HintPath>
+    </Reference>
     <Reference Include="CapaVistaNav">
       <HintPath>..\..\..\..\Componentes\Navegador\CapaVista\bin\Debug\CapaVistaNav.dll</HintPath>
     </Reference>
@@ -45,8 +49,12 @@
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Seguridad_Controlador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+<<<<<<< HEAD
       <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files\UMG\Instalador General HSC\Seguridad_Controlador.dll</HintPath>
 >>>>>>> 19d9b50933a898b2079be65e3c8e5eb16f32f681
+=======
+      <HintPath>..\..\..\..\En caso de dll faltantes\Seguridad_Controlador.dll</HintPath>
+>>>>>>> c2b5eb047f22a8c52a9a09639142c5aaffa2d033
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
