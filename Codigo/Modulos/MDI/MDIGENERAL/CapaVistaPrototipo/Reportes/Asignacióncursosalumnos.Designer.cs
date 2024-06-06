@@ -30,7 +30,7 @@ namespace CapaVistaPrototipo.Reportes
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.ReporteACA1 = new CapaVistaPrototipo.ReporteACA();
+            this.ReporteACA1 = new CapaVistaPrototipo.Reportes.ReporteACA();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
