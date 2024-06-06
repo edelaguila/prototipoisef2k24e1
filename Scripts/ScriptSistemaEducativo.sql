@@ -1,31 +1,199 @@
+
+CREATE DATABASE siu;
+USE siu;
+-- -----------------------------------------------------
+-- Table `educativo`.`Alumnos`
+-- -----------------------------------------------------
+CREATE TABLE alumnos
+ (
+  carnet_alumno VARCHAR(15),
+  nombre_alumno VARCHAR(45),
+  direccion_alumno VARCHAR(45),
+  telefono_alumno VARCHAR(45),
+  email_alumno VARCHAR(20),
+  estatus_alumno VARCHAR(1),
+  PRIMARY KEY (carnet_alumno)
+) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+
+-- -----------------------------------------------------
+-- Table `educativo`.`Maestros`
+-- -----------------------------------------------------
+CREATE TABLE maestros
+(
+  codigo_maestro VARCHAR(5),
+  nombre_maestro VARCHAR(45),
+  direccion_maestro VARCHAR(45),
+  telefono_maetro VARCHAR(45),
+  email_maestro VARCHAR(20),
+  estatus_maestro VARCHAR(1),
+  PRIMARY KEY (codigo_maestro)
+ ) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+-- -----------------------------------------------------
+-- Table `educativo`.`Facultades`
+-- -----------------------------------------------------
+CREATE TABLE facultades
+(
+  codigo_facultad VARCHAR(5),
+  nombre_facultad VARCHAR(45),
+  estatus_facultad VARCHAR(1),
+  PRIMARY KEY (codigo_facultad)
+) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+-- -----------------------------------------------------
+-- Table `educativo`.`Carreras`
+-- -----------------------------------------------------
+CREATE TABLE carreras
+(
+  codigo_carrera VARCHAR(5),
+  nombre_carrera VARCHAR(45),
+  codigo_facultad VARCHAR(5),
+  estatus_carrera VARCHAR(1),
+  PRIMARY KEY (codigo_carrera),
+  FOREIGN KEY (codigo_facultad) REFERENCES facultades(codigo_facultad)
+) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+-- -----------------------------------------------------
+-- Table `educativo`.`Cursos`
+-- -----------------------------------------------------
+CREATE TABLE cursos
+(
+  codigo_curso VARCHAR(5),
+  nombre_curso VARCHAR(45),
+  estatus_curso VARCHAR(1),
+  PRIMARY KEY (codigo_curso)
+ ) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+-- -----------------------------------------------------
+-- Table `educativo`.`Secciones`
+-- -----------------------------------------------------
+CREATE TABLE secciones
+(
+  codigo_seccion VARCHAR(5),
+  nombre_seccion VARCHAR(45),
+  estatus_seccion VARCHAR(1),
+  PRIMARY KEY (codigo_seccion)
+ ) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+-- -----------------------------------------------------
+-- Table `educativo`.`Sedes`
+-- -----------------------------------------------------
+CREATE TABLE sedes
+(
+  codigo_sede VARCHAR(5),
+  nombre_sede VARCHAR(45),
+  estatus_sede VARCHAR(1),
+  PRIMARY KEY (codigo_sede)
+) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+-- -----------------------------------------------------
+-- Table `educativo`.`Aulas`
+-- -----------------------------------------------------
+CREATE TABLE aulas
+(
+  codigo_aula VARCHAR(5),
+  nombre_aula VARCHAR(45),
+  estatus_aula VARCHAR(1),
+  PRIMARY KEY (codigo_aula)
+) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE jornadas
+(
+	codigo_jornada VARCHAR(5),
+    nombre_jornada VARCHAR(45),
+    estatus_jornada VARCHAR(1),
+    PRIMARY KEY (codigo_jornada)
+) ENGINE=INNODB DEFAULT CHARSET=latin1;
+-- -----------------------------------------------------
+-- Table `educativo`.`Asignacion_cursos_alumnos`
+-- -----------------------------------------------------
+CREATE TABLE asignacioncursosalumnos
+(
+  codigo_carrera VARCHAR(5),
+  codigo_sede VARCHAR(5),
+  codigo_jornada VARCHAR(5),
+  codigo_seccion VARCHAR(5),
+  codigo_aula VARCHAR(5),
+  codigo_curso VARCHAR(5),
+  carnet_alumno VARCHAR(15),
+  nota_asignacioncursoalumnos FLOAT(10,2), 
+  PRIMARY KEY (codigo_carrera, codigo_sede, codigo_jornada, codigo_seccion, codigo_aula, codigo_curso, carnet_alumno),
+  FOREIGN KEY (codigo_carrera) REFERENCES carreras(codigo_carrera),
+  FOREIGN KEY (codigo_sede) REFERENCES sedes(codigo_sede),
+  FOREIGN KEY (codigo_jornada) REFERENCES jornadas(codigo_jornada),
+  FOREIGN KEY (codigo_seccion) REFERENCES secciones(codigo_seccion),
+  FOREIGN KEY (codigo_aula) REFERENCES aulas(codigo_aula),
+  FOREIGN KEY (codigo_curso) REFERENCES cursos(codigo_curso),
+  FOREIGN KEY (carnet_alumno) REFERENCES alumnos(carnet_alumno)
+  ) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+-- -----------------------------------------------------
+-- Table `educativo`.`Asignacion_cursos_maestros`
+-- -----------------------------------------------------
+CREATE TABLE asignacioncursosmastros
+(
+  codigo_carrera VARCHAR(5),
+  codigo_sede VARCHAR(5),
+  codigo_jornada VARCHAR(5),
+  codigo_seccion VARCHAR(5),
+  codigo_aula VARCHAR(5),
+  codigo_curso VARCHAR(5),
+  codigo_maestro VARCHAR(5),
+  PRIMARY KEY (codigo_carrera, codigo_sede, codigo_jornada, codigo_seccion, codigo_aula, codigo_curso),
+  FOREIGN KEY (codigo_carrera) REFERENCES carreras(codigo_carrera),
+  FOREIGN KEY (codigo_sede) REFERENCES sedes(codigo_sede),
+  FOREIGN KEY (codigo_jornada) REFERENCES jornadas(codigo_jornada),
+  FOREIGN KEY (codigo_seccion) REFERENCES secciones(codigo_seccion),
+  FOREIGN KEY (codigo_aula) REFERENCES aulas(codigo_aula),
+  FOREIGN KEY (codigo_curso) REFERENCES cursos(codigo_curso),
+  FOREIGN KEY (codigo_maestro) REFERENCES maestros(codigo_maestro)
+  ) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+
+-- Insertar datos en la tabla maestros
+INSERT INTO maestros (codigo_maestro, nombre_maestro, direccion_maestro, telefono_maetro, email_maestro, estatus_maestro)
+VALUES ('1', 'Juan Perez', 'Av. Siempre Viva 123', '555-1234', 'juan@example.com', 'A');
+
+INSERT INTO maestros (codigo_maestro, nombre_maestro, direccion_maestro, telefono_maetro, email_maestro, estatus_maestro)
+VALUES ('2', 'Maria Lopez', 'Calle Falsa 456', '555-5678', 'maria@example.com', 'A');
+
+-- Insertar datos en la tabla facultades
+INSERT INTO facultades (codigo_facultad, nombre_facultad, estatus_facultad)
+VALUES ('1', 'Ingeniería', 'A');
+
+INSERT INTO facultades (codigo_facultad, nombre_facultad, estatus_facultad)
+VALUES ('2', 'Ciencias Sociales', 'A');
+
+-- Insertar datos en la tabla carreras
+INSERT INTO carreras (codigo_carrera, nombre_carrera, codigo_facultad, estatus_carrera)
+VALUES ('1', 'Ingeniería de Sistemas', '1', 'A');
+
+INSERT INTO carreras (codigo_carrera, nombre_carrera, codigo_facultad, estatus_carrera)
+VALUES ('2', 'Psicología', '2', 'A');
+
+-- Insertar datos en la tabla secciones
+INSERT INTO secciones (codigo_seccion, nombre_seccion, estatus_seccion)
+VALUES ('1', 'Sección A', 'A');
+
+INSERT INTO secciones (codigo_seccion, nombre_seccion, estatus_seccion)
+VALUES ('2', 'Sección B', 'A');
+
+-- Insertar datos en la tabla sedes
+INSERT INTO sedes (codigo_sede, nombre_sede, estatus_sede)
+VALUES ('1', 'Sede Central', 'A');
+
+INSERT INTO sedes (codigo_sede, nombre_sede, estatus_sede)
+VALUES ('2', 'Sede Norte', 'A');
+
+-- Insertar datos en la tabla aulas
+INSERT INTO aulas (codigo_aula, nombre_aula, estatus_aula)
+VALUES ('1', 'Aula 101', 'A');
+
+INSERT INTO aulas (codigo_aula, nombre_aula, estatus_aula)
+VALUES ('2', 'Aula 102', 'A');
+
+-- Insertar datos en la tabla jornadas
+INSERT INTO jornadas (codigo_jornada, nombre_jornada, estatus_jornada)
+VALUES ('1', 'Matutina', 'A');
+
+INSERT INTO jornadas (codigo_jornada, nombre_jornada, estatus_jornada)
+VALUES ('2', 'Verpertina', 'A');
+
 -- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 26-10-2023 a las 07:02:28
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
-use siu;
---
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tbl_aplicaciones`
---
 
 CREATE TABLE `tbl_aplicaciones` (
   `pk_id_aplicacion` int(11) NOT NULL,
@@ -373,6 +541,149 @@ ALTER TABLE `tbl_permisosaplicacionperfil`
   ADD CONSTRAINT `tbl_permisosaplicacionperfil_ibfk_2` FOREIGN KEY (`fk_id_perfil`) REFERENCES `tbl_perfiles` (`pk_id_perfil`);
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+--
+-- INSERTS SEGURIDAD
+--
+INSERT INTO `tbl_modulos` VALUES
+('1000', 'SEGURIDAD', 'Seguridad', 1)
+;
+
+-- -----APLICACIONES
+INSERT INTO `tbl_aplicaciones` VALUES
+('1', 'Menu', 'Ingreso Login', '1'),
+('999', 'Cerrar Sesion', 'Cerrar Sesion', '1'),
+('1000', 'MDI SEGURIDAD', 'PARA SEGURIDAD', '1'),
+('1001', 'Mant. Usuario', 'PARA SEGURIDAD', '1'),
+('1002', 'Mant. Aplicación', 'PARA SEGURIDAD', '1'),
+('1003', 'Mant. Modulo', 'PARA SEGURIDAD', '1'),
+('1004', 'Mant. Perfil', 'PARA SEGURIDAD', '1'),
+('1101', 'Asign. Modulo Aplicacion', 'PARA SEGURIDAD', '1'),
+('1102', 'Asign. Aplicacion Perfil', 'PARA SEGURIDAD', '1'),
+('1103', 'Asign. Perfil Usuario', 'PARA SEGURIDAD', '1'),
+('1201', 'Pcs. Cambio Contraseña', 'PARA SEGURIDAD', '1'),
+('1301', 'Pcs. BITACORA', 'PARA SEGURIDAD', '1')
+;
+
+-- -----USUARIOS
+INSERT INTO `tbl_usuarios` VALUES
+('1', 'admin', 'admin', 'admin', 'HO0aGo4nM94=', 'esduardo@gmail.com', '1', 'COLOR FAVORITO', 'X9yc1/l1b2A=')
+;
+
+-- -----PERFILES
+INSERT INTO `tbl_perfiles` VALUES
+('1', 'ADMINISTRADOR', 'contiene todos los permisos del programa', 1),
+('2', 'SEGURIDAD', 'contiene todos los permisos de seguridad', 1)
+;
+
+-- -----ASIGNACIÓNES MODULO A APLICACION
+INSERT INTO `tbl_asignacionmoduloaplicacion` VALUES
+('1000', '1000'),
+('1000', '1001'),
+('1000', '1002'),
+('1000', '1003'),
+('1000', '1004'),
+('1000', '1102'),
+('1000', '1103'),
+('1000', '1201'),
+('1000', '1301')
+;
+
+-- -----PERMISOS DE APLICACIONES A PERFILES
+INSERT INTO `tbl_permisosAplicacionPerfil` VALUES
+('1', '1000', '1', '1', '1', '1', '1'),
+('1', '1001', '1', '1', '1', '1', '1'),
+('1', '1002', '1', '1', '1', '1', '1'),
+('1', '1003', '1', '1', '1', '1', '1'),
+('1', '1004', '1', '1', '1', '1', '1'),
+('1', '1101', '1', '1', '1', '1', '1'),
+('1', '1102', '1', '1', '1', '1', '1'),
+('1', '1103', '1', '1', '1', '1', '1'),
+('1', '1201', '1', '1', '1', '1', '1'),
+('1', '1301', '1', '1', '1', '1', '1')
+;
+
+-- -----ASIGNACIÓN DE PERFIL A USUARIO
+INSERT INTO `tbl_asignacionesPerfilsUsuario` VALUES
+('1', '1')
+; 
+
+-- -----INSERTS SEGURIDAD MODULO
+INSERT INTO tbl_modulos VALUES
+('9000', 'MDI ESCOLAR', 'MDI', 1)
+;
+ 
+-- -----APLICACIONES
+INSERT INTO tbl_aplicaciones VALUES
+('9000', 'MDI ESCOLAR', 'PARA MDI', '1'),
+('9001', 'Mantenimiento ALUMNO', 'PARA MDI', '1'),
+('9002', 'Mantenimiento CURSO', 'PARA MDI', '1'),
+('9003', 'Proceso ASIGNACION CURSO Y ALUMNO', 'PARA MDI', '1')
+;
+ 
+-- -----ASIGNACIÓNES MODULO A APLICACION
+INSERT INTO tbl_asignacionmoduloaplicacion VALUES
+('9000', '9000'),
+('9000', '9001'),
+('9000', '9002'),
+('9000', '9003')
+;
+ 
+-- -----PERMISOS DE APLICACIONES A PERFILES
+INSERT INTO tbl_permisosAplicacionPerfil VALUES
+('1', '9000', '1', '1', '1', '1', '1'),
+('1', '9001', '1', '1', '1', '1', '1'),
+('1', '9002', '1', '1', '1', '1', '1'),
+('1', '9003', '1', '1', '1', '1', '1')
+;
+
+--
+-- Table structure for table `tbl_estados`
+--
+
+DROP TABLE IF EXISTS `tbl_estados`;
+CREATE TABLE `tbl_estados` (
+  `pk_id_estado` int NOT NULL AUTO_INCREMENT,
+  `est_info_estado` varchar(50),
+  `est_num_estado` int DEFAULT NULL,
+  PRIMARY KEY (`pk_id_estado`)
+);
+
+--
+-- Dumping data for table `tbl_estados`
+--
+
+LOCK TABLES `tbl_estados` WRITE;
+INSERT INTO `tbl_estados` VALUES (1,'Activo',1),(2,'Eliminado',2),(3,'Modificado',3);
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_reportes`
+--
+
+DROP TABLE IF EXISTS `tbl_reportes`;
+CREATE TABLE `tbl_reportes` (
+  `pk_id_reporte` int NOT NULL AUTO_INCREMENT,
+  `rep_correlativo` int DEFAULT NULL,
+  `rep_nombre` varchar(50),
+  `fk_estado` int DEFAULT NULL,
+  `rep_fecha` datetime DEFAULT NULL,
+  `rep_archivo` varchar(120),
+  `rep_fechaMod` datetime DEFAULT NULL,
+  PRIMARY KEY (`pk_id_reporte`),
+  UNIQUE KEY `rep_correlativo` (`rep_correlativo`),
+  KEY `fk_estado` (`fk_estado`),
+  CONSTRAINT `tbl_reportes_ibfk_1` FOREIGN KEY (`fk_estado`) REFERENCES `tbl_estados` (`pk_id_estado`)
+);
+
+
+/*NO EJECUTAR DE UN SOLOOOO */;
+UPDATE tbl_reportes
+SET rep_archivo = ''
+WHERE id = 1;
+
+
+
+
+
+
